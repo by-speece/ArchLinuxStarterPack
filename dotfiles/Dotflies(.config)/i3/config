@@ -229,7 +229,7 @@ client.background           #2f343f
 
 
 # Set Wallpaper (directory to be specified)
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wp/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wp/lockscreen.jpg
 
 #Montowanie
 exec_always --no-startup-id udiskie
@@ -256,7 +256,7 @@ exec --no-startup-id dunst -config <~/.config/dunst/dunstrc>
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-exec --no-startup-id betterlockscreen -w dim
+#exec --no-startup-id betterlockscreen -w dim
 bindsym $mod+shift+x exec betterlockscreen -l dim
 #exec  --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -s 
 
