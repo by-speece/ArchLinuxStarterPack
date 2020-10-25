@@ -3,7 +3,7 @@ Hi guys,
 This is my Arch Linux Pack with my configs, wallpapers etc.
 
 Screenshot of Full Configured Arch from my config:
-![alt text](https://github.com/by-speece/arch/blob/master/screenshot/Arch_rice.png?raw=true)
+![alt text](https://github.com/by-speece/arch/blob/master/screenshot/Workflow.png?raw=true)
 
 Wallpaper upscaled by [waifu2x-extension-gui](https://github.com/AaronFeng753/Waifu2x-Extension-GUI) 
 Wallpaper(8K resolution!): ![alt text](https://github.com/by-speece/arch/blob/master/configuration/Dotfiles/i3/wp/lockscreen.png?raw=true)
