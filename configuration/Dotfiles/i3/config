@@ -211,31 +211,12 @@ client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
 
-#bar {
-#    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#    status_command i3status -c ~/.config/i3/i3status.conf
-#    colors {
-#    background #2f343f
-#    statusline #2f343f
-#    separator #4b5262
-#
-#    # colour of border, background, and text
-#    focused_workspace       #2f343f #bf616a #d8dee8
-#    active_workspace        #2f343f #2f343f #d8dee8
-#    inactive_workspace      #2f343f #2f343f #d8dee8
-#    urgent_workspacei       #2f343f #ebcb8b #2f343f
-#	}
-#}
-
 
 # Set Wallpaper (directory to be specified)
-exec_always --no-startup-id feh --bg-fill ~/.config/i3/wp/lockscreen.png
+exec --no-startup-id feh --bg-fill ~/.config/i3/wp/lockscreen.png
 
 #Montowanie
-exec_always --no-startup-id udiskie
-
-#Bluetooth
-#exec --no-startup-id /usr/bin/blueman-applet
+exec --no-startup-id udiskie
 
 #Screenshot
 bindsym Print exec --no-startup-id gnome-screenshot -i
@@ -249,18 +230,25 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 exec_always --no-startup-id xinput set-prop "Elan Touchpad" "libinput Tapping Enabled" 1
 
 #Klawiatura PL
-exec_always --no-startup-id "setxkbmap  pl"
+exec --no-startup-id setxkbmap  pl
 
-#powiadomienia
+#Powiadomienia
 exec --no-startup-id dunst -config <~/.config/dunst/dunstrc>
 
+#Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-#exec --no-startup-id betterlockscreen -w dim
+#Lockscreen
 bindsym $mod+shift+x exec betterlockscreen -l dim
-#exec  --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -s 
 
-exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#Manager Autoryzacjji
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-
-exec_always --no-startup-id picom
+#Przezroczystość konsoli
+exec --no-startup-id picom
+#Keypass
+exec --no-startup-id keepassxc 
+for_window [class="KeePassXC"] move scratchpad
+for_window [class=KeePassXC"] border pixel 3
+for_window [class="KeePassXC"] resize set 800 600
+bindsym $mod+p [class="KeePassXC"] scratchpad show; [class="KeePassXC"] move position center
